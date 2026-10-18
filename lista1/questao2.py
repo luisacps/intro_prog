@@ -1,3 +1,2 @@
-a = 1
-b = 2
-print(a + b)
+num = int(input('insira um valor inteiro: '))
+print(f'antecessor: {num-1}; sucessor: {num+1}')
