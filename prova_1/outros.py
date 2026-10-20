@@ -1,20 +1,21 @@
-# imprimir o contrário de um número, mantendo o sinal
+#falha para numero terminados em zero
 
 n = int(input('numero: '))
+invertido = 0
 
 if n > 0:
-    while n > 0:
-        novo_num = n%10
-        print(novo_num, end='')
 
-        n = n//10
+    while n > 0:
+        num = n % 10
+        invertido = (invertido * 10) + num
+        n = n // 10
 
 else:
-    num = n * -1
+    n = n * -1
+    while n > 0:
+        num = n % 10
+        invertido = (invertido * 10) + num
+        n = n // 10
+    invertido *= -1
 
-    print('-', end='')
-    while num > 0:
-        novo_num = num%10
-        print(novo_num, end='')
-
-        num = num // 10
+print(invertido)
